@@ -17,7 +17,7 @@ $(call inherit-product-if-exists, vendor/realme/sdm710-common/sdm710-common-vend
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-pa
 
 # Vendor properties
 -include $(LOCAL_PATH)/vendor_props.mk
@@ -210,8 +210,8 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.2-service.clearkey
 
 # Doze
-PRODUCT_PACKAGES += \
-    RealmeParts
+#PRODUCT_PACKAGES += \
+#    RealmeParts
 
 # Fingerprint
 PRODUCT_PACKAGES += \
@@ -317,7 +317,8 @@ PRODUCT_BOOT_JARS += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.2-impl \
+    android.hardware.power@1.2-service
 
 # QMI
 PRODUCT_PACKAGES += \
@@ -375,13 +376,6 @@ PRODUCT_COPY_FILES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 # TextClassifier
 PRODUCT_PACKAGES += \
     textclassifier.bundle1
@@ -391,10 +385,6 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service \
     thermal.sdm710
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB
 PRODUCT_PACKAGES += \
