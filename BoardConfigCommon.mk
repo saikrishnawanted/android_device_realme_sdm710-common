@@ -154,6 +154,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
+TARGET_TAP_TO_WAKE_EVENT_NODE := "/proc/touchpanel/double_tap_enable"
 GENERIC_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_NON_LEGACY_POWERHAL := true
 
